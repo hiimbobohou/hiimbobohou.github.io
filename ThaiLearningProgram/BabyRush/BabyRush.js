@@ -9,7 +9,7 @@ const carImages = {
 const carAudio = {
     'muvmuv': 'audio/muvmuv.mp3',
     'lunar': 'audio/lunar.mp3',
-    'any': 'audio/any.mp3'
+    'any': 'audio/any.mp3',
 };
 
 let gameRunning = false;
@@ -344,4 +344,5 @@ window.addEventListener('load', () => {
     carSelection.style.display = 'flex';
     leftRoad.style.top = '-600px';
     rightRoad.style.top = '-600px';
+
 });
