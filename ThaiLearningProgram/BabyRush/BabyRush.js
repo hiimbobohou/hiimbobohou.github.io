@@ -7,9 +7,9 @@ const carImages = {
 
 // 添加每辆赛车对应的音频文件
 const carAudio = {
-    'muvmuv': 'audio/muvmuv.mp3',
-    'lunar': 'audio/lunar.mp3',
-    'any': 'audio/any.mp3',
+    'muvmuv': 'muvmuv.mp3',
+    'lunar': 'lunar.mp3',
+    'any': 'any.mp3',
 };
 
 let gameRunning = false;
@@ -346,3 +346,4 @@ window.addEventListener('load', () => {
     rightRoad.style.top = '-600px';
 
 });
+
