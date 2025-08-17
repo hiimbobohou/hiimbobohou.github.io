@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辅音消消乐</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>辅音消消乐</h1>
+    <div>规则：点击辅音字母选中/取消选中。选中同一类的所有辅音后会一起消失。</div>
+    <div>Tap a consonant to select/deselect it. When all consonants of the same type are selected, they will be cleared at once.</div>
+    <div id="game-info">
+        <span>时间Time: <span id="time">0</span>s</span> |
+        <span>得分Score: <span id="score">0</span></span>
+    </div>
+    <div id="target-icon">当前目标类型Target type: 无</div>
+    <div id="game-container">
+        <div id="game-board"></div>
+    </div>
+    <div id="message" class="message-info"></div>
+    <div id="timer">剩余时间Time left: <span id="time-left">100</span>s</div>
+    <div id="controls">
+        <button id="restart-btn">重新开始Restart</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+

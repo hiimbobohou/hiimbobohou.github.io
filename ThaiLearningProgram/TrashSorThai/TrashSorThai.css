@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    user-select: none; /* 防止拖拽时选中文本 */
+}
+h1 {
+    color: #2e7d32;
+}
+#score-board {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#garbage-pile {
+    min-height: 150px;
+    width: 80%;
+    border: 2px dashed #90a4ae;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #eceff1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#garbage-item {
+    font-size: 20px;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#garbage-item:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+#bins-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.bin {
+    width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.bin h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.bin-area {
+    height: 100px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.bin-area.drag-over {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-style: solid;
+}
+#recyclable { background-color: #2196f3; } /* 蓝色 */
+#kitchen { background-color: #4caf50; } /* 绿色 */
+#other { background-color: #9e9e9e; } /* 灰色 */
+#message {
+    font-size: 20px;
+    min-height: 30px;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* 初始隐藏 */
+}
+#restart-btn:hover {
+    background-color: #f57c00;
+}
+
+
+

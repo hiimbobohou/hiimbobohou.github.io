@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3ebf8;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-info {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+#game-board {
+    display: grid;
+    /* 6 行 7 列 */
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 2px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #999;
+    background-color: #ffffff;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.tile:hover {
+    background-color: #c0c0c0;
+}
+
+.tile.clicked-target {
+    background-color: #80d080;
+    border-color: #40a040;
+}
+
+.tile.matched {
+    visibility: hidden;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.message-info {
+    color: #1976d2;
+}
+
+.message-success {
+    color: #388e3c;
+}
+
+.message-error {
+    color: #d32f2f;
+}
+
+#controls {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #a494d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+button:hover {
+    background-color: #716693;
+}
+
+#timer {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#target-icon {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+

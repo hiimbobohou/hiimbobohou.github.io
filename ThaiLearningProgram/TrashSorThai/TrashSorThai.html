@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垃(辅)圾(音)分类练习</title>
+    <link rel="stylesheet" href="TrashSorThai.css">
+</head>
+<body>
+
+    <h1>垃(辅)圾(音)分类练习</h1>
+    <div id="score-board">得分: <span id="score">0</span></div>
+    <div id="game-area">
+        <div id="garbage-pile">
+            <!-- 垃圾物品将在这里动态生成 -->
+        </div>
+        <div id="bins-container">
+            <div class="bin" id="recyclable">
+                <h3>中辅音</h3>
+                <div class="bin-area" data-type="中辅音"></div>
+            </div>
+            <div class="bin" id="kitchen">
+                <h3>高辅音</h3>
+                <div class="bin-area" data-type="高辅音"></div>
+            </div>
+            <div class="bin" id="other">
+                <h3>低辅音</h3>
+                <div class="bin-area" data-type="低辅音"></div>
+            </div>
+        </div>
+        <div id="message"></div>
+        <button id="restart-btn">再玩一次</button>
+    </div>
+
+    <script src="TrashSorThai.js"></script>
+</body>
+</html>
+
+
