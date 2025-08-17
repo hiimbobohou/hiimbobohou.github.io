@@ -97,7 +97,7 @@ function resetAllCards() {
 }
 
 function returnToIndex() {
-    window.location.href = "../index.html";
+    window.history.back();
 }
 
 // 页面加载完成后初始化
