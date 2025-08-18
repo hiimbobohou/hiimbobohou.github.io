@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #ff7e5f;
+    --background-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --success-color: #4caf50;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+    --info-color: #2196f3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.game-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.game-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.choice-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.choice-btn:hover {
+    background-color: #d5d5d5;
+}
+
+.choice-btn.selected {
+    background-color: var(--info-color);
+    color: white;
+    font-weight: bold;
+}
+
+.choice-btn.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.info-item {
+    font-weight: bold;
+}
+
+.tone-display {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    min-height: 40px;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.result.success {
+    background-color: #e8f5e9;
+    color: var(--success-color);
+}
+
+.result.failure {
+    background-color: #ffebee;
+    color: var(--danger-color);
+}
+
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #3a5a80;
+}
+
+.action-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.rules {
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #fff8e1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.rules h3 {
+    margin-top: 0;
+    color: var(--warning-color);
+}
+
+.rules ul {
+    padding-left: 20px;
+}
+
+.rules li {
+    margin-bottom: 8px;
+}
+
+
+

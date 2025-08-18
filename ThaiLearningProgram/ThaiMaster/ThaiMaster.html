@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰语声调大师</title>
+    <link rel="stylesheet" href="ThaiMaster.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>泰语声调大师</h1>
+    <p class="subtitle">四个环节决定泰语发音</p>
+
+    <div class="game-info">
+    </div>
+
+    <div class="game-section">
+        <h2 class="section-title">1. 选择你的辅音</h2>
+        <div class="choices" id="consonant-choices">
+            <!-- 选项将由JS生成 -->
+        </div>
+    </div>
+
+    <div class="game-section">
+        <h2 class="section-title">2. 选择你的元音</h2>
+        <div class="choices" id="vowel-choices">
+            <!-- 选项将由JS生成 -->
+        </div>
+    </div>
+
+    <div class="game-section">
+        <h2 class="section-title">3. 声调</h2>
+        <div class="choices" id="tone-mark-choices">
+            <!-- 选项将由JS生成 -->
+        </div>
+    </div>
+
+    <div class="game-section">
+        <h2 class="section-title">4. 尾辅音</h2>
+        <div class="choices" id="final-consonant-choices">
+            <!-- 选项将由JS生成 -->
+        </div>
+    </div>
+
+    <div class="game-section">
+        <h2 class="section-title">5. 使用前引字 </h2>
+        <div class="choices" id="prefix-choices">
+            <!-- 选项将由JS生成 -->
+        </div>
+    </div>
+
+    <button class="action-btn" id="calculate-btn">计算最终声调</button>
+
+    <div class="tone-display" id="tone-display">
+        <!-- 最终声调显示 -->
+    </div>
+
+    <div class="result" id="result">
+        <!-- 游戏结果反馈 -->
+    </div>
+
+    <div class="rules">
+        <h3>游戏规则：泰语发音四维法则</h3>
+        <ul>
+            <li><strong>辅音分类:</strong> 决定默认声调。</li>
+            <li><strong>声调符号:</strong> 覆盖默认声调。高辅音不能使用升调。</li>
+            <li><strong>尾辅音:</strong> 闭音节会锁定声调为高平调。</li>
+            <li><strong>前引字:</strong> 改变辅音的属性。</li>
+            <li><strong>胜利条件:</strong> 计算出声调。</li>
+            <li><strong>失败条件:</strong> 违反规则 (如高辅音用升调卡)。</li>
+        </ul>
+    </div>
+</div>
+
+<script src="ThaiMaster.js"></script>
+</body>
+</html>
+
+
+
