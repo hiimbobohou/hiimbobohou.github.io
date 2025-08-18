@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰语单词记忆游戏</title>
+<link rel="stylesheet" href="ThaiVoca.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- 主导航 -->
+  <div class="nav-buttons">
+    <button class="nav-btn active" data-target="setupScreen">游戏设置</button>
+    <button class="nav-btn" data-target="managementScreen">词汇管理</button>
+  </div>
+
+  <!-- 游戏设置界面 -->
+  <div class="screen active" id="setupScreen">
+    <h1>泰语单词记忆游戏</h1>
+    
+    <div class="category-selection">
+      <h2 class="section-title">选择词语类别</h2>
+      <div class="category-grid" id="categoryGrid">
+        <!-- 类别按钮将通过JS动态生成 -->
+      </div>
+    </div>
+    
+    <div class="custom-section">
+      <button class="btn-secondary" id="toggleAddCategory">+ 添加新类别</button>
+      <div class="custom-inputs" id="addCategoryInputs">
+        <h3>创建新类别</h3>
+        <input type="text" id="newCategoryName" placeholder="输入新类别名称">
+        <button class="btn-success" id="createCategoryBtn">创建类别</button>
+      </div>
+    </div>
+    
+    <div class="custom-section">
+      <button class="btn-secondary" id="toggleCustomInput">+ 添加词汇到类别</button>
+      <div class="custom-inputs" id="customInputs">
+        <h3>添加词汇到指定类别</h3>
+        <input type="text" id="customChinese" placeholder="中文意思 (例如: 猫)">
+        <input type="text" id="customThai" placeholder="泰语单词 (例如: แมว)">
+        <select id="categorySelect">
+          <option value="">-- 请选择要添加到的类别 --</option>
+          <!-- 类别选项将通过JS动态生成 -->
+        </select>
+        <button class="btn-success" id="addCustomWord">添加单词</button>
+        <div class="custom-words-list" id="customWordsList">
+          <p>暂无自定义单词</p>
+        </div>
+        <button class="btn-danger" id="clearCustomWords">清除所有自定义单词</button>
+      </div>
+    </div>
+    
+    <button class="btn-primary" id="startGameBtn" disabled>开始游戏</button>
+  </div>
+
+  <!-- 词汇管理界面 -->
+  <div class="screen" id="managementScreen">
+    <h1>词汇管理</h1>
+    
+    <div class="management-section">
+      <h3>所有类别</h3>
+      <div class="category-list" id="categoryList">
+        <!-- 类别列表将通过JS动态生成 -->
+      </div>
+    </div>
+    
+    <div class="management-section">
+      <h3 id="wordListTitle">词汇列表</h3> <!-- 标题将根据选中的类别动态更新 -->
+      <div class="word-list" id="wordList">
+        <div class="empty-message">请选择一个类别查看词汇</div>
+      </div>
+    </div>
+    
+    <button class="btn-secondary" id="refreshManagement">刷新列表</button>
+  </div>
+
+  <!-- 游戏主界面 -->
+  <div class="screen" id="gameScreen">
+    <h1>泰语单词记忆游戏</h1>
+    <div class="score">得分: <span id="score">0</span> <span class="category-tag" id="currentCategoryTag"></span></div>
+    <div class="word-count">该类别还剩 <span id="remainingWords">0</span> 个单词</div>
+    <div class="word-display" id="chineseWord">加载中...</div>
+    <div class="hint" id="hint">需要选择 <span id="letterCount">0</span> 个字母</div>
+    <div class="input-display" id="userInput"></div>
+    <div class="controls">
+      <button class="control-btn btn-secondary" id="undoButton" disabled>撤销</button>
+      <button class="control-btn btn-primary" id="nextButton" disabled>下一个单词</button>
+      <button class="control-btn btn-danger" id="backToSetupBtn">返回设置</button>
+    </div>
+    <div class="letters-container" id="lettersContainer"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+</div>
+
+<!-- 完成类别提示模态框 -->
+<div id="completionModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="completionMessage">恭喜！</h2>
+    <p id="completionDetails"></p>
+    <div class="modal-buttons">
+      <button class="btn-primary" id="playAgainBtn">再玩一次</button>
+      <button class="btn-secondary" id="chooseCategoryBtn">选择新类别</button>
+    </div>
+  </div>
+</div>
+
+<script src="ThaiVoca.js"></script>
+</body>
+</html>
+
+
+
