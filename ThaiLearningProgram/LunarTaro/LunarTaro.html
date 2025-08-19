@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰语辅音塔罗牌</title>
+    <link rel="stylesheet" href="LunarTaro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lunar塔罗牌</h1>
+        <p class="subtitle">专注于你的问题，然后抽取你的命运辅音</p>
+        
+        <div class="question-area">
+            <input type="text" id="questionInput" placeholder="请输入你的问题...">
+            <div>你的问题: <span id="questionDisplay">请先输入问题</span></div>
+        </div>
+
+        <div class="card-area">
+            <div id="cardDisplay">
+                <div id="cardName"></div>
+                <div id="cardMeaning"></div>
+                <div id="cardInterpretation"></div>
+            </div>
+            <div id="cardBackPlaceholder">
+                <div class="card-back">
+                    <!-- 图片通过CSS背景设置，此处留空 -->
+                </div>
+            </div>
+        </div>
+        
+        <button class="draw-button" onclick="drawCard()">抽取辅音牌</button>
+        
+        <p class="instructions">输入问题后，点击按钮抽取一个泰语辅音字母及其对应单词和解读</p>
+    </div>
+
+    <script src="LunarTaro.js"></script>
+</body>
+</html>
+
+
+

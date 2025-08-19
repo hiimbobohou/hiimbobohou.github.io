@@ -1,0 +1,193 @@
+:root {
+    /* 定义青黄配色变量 */
+    --color-primary: #40c0cd; /* 青色 */
+    --color-secondary: #fadd54; /* 黄色 */
+    --color-background: #ffffff; /* 背景白色 */
+    --color-text: #34495e; /* 主要文字深灰蓝色 */
+    --color-accent: #2c3e50; /* 深一点的蓝灰色 */
+    --color-card-bg: #ffffff; /* 卡片背景白色 */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-primary);
+}
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+.question-area {
+    margin: 25px 0 5px 0; 
+    padding: 20px;
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+#questionDisplay {
+    font-size: 1.4em;
+    min-height: 1.6em;
+    margin: 15px 0;
+    font-style: italic;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+#questionInput {
+    width: 85%;
+    padding: 14px;
+    font-size: 1.1em;
+    border: 2px solid var(--color-primary);
+    border-radius: 30px;
+    background-color: white;
+    color: var(--color-text);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+#questionInput:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 2px 8px rgba(250, 221, 84, 0.4);
+    background-color: #fffde7;
+}
+.card-area {
+    margin: 20px 0 30px 0; /* 减小上方边距，调整下方边距 */
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cardDisplay {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    border-radius: 15px;
+    padding: 35px;
+    width: 85%;
+    max-width: 420px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    margin: 5px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--color-secondary);
+}
+#cardDisplay:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+#cardDisplay.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+#cardName {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-primary); /* 主要青色 */
+}
+#cardMeaning {
+    font-size: 1.4em;
+    line-height: 1.7;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+#cardInterpretation {
+    font-size: 1.5em;
+    line-height: 1.7;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.yes {
+    background-color: #d5f5e3; /* 浅绿表示肯定 */
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+.no {
+    background-color: #fadbd8; /* 浅红表示否定 */
+    color: #c0392b;
+    border: 1px solid #c0392b;
+}
+.draw-button {
+    background-color: var(--color-primary); /* 青色 */
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 5px; /* 减小上方边距 */
+}
+.draw-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-secondary); /* 悬停时变为黄色 */
+    color: var(--color-text);
+}
+.draw-button:active {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-back {
+    /* 调整为图片的实际尺寸 240x240 */
+    width: 160px;
+    height: 260px;
+    background-color: var(--color-primary); /* 青色 */
+    border-radius: 20px;
+    margin: 5px auto; /* 减小上方边距 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
+}
+/* 使用本地图片作为卡片背面 */
+.card-back::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* 修改为本地图片路径 */
+    background-image: url("image/Lunar.png");
+    background-size: contain; /* 使用 contain 确保图片完整显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 图片居中 */
+    opacity: 0.95;
+}
+.instructions {
+    margin-top: 35px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+
+
