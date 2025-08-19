@@ -39,7 +39,7 @@ const vocabularyData = {
     { chinese: "绿色", thai: "สีเขียว" },
     { chinese: "黑色", thai: "สีดำ" },
     { chinese: "粉红色", thai: "สีชมพู" },
-    { chinese: "橙色", thai: "สีเส้ม" },
+    { chinese: "橙色", thai: "สีส้ม" },
     { chinese: "天蓝色", thai: "สีฟ้า" },
     { chinese: "棕色", thai: "สีน้ำตาล" },
     { chinese: "紫色", thai: "สีม่วง" },
