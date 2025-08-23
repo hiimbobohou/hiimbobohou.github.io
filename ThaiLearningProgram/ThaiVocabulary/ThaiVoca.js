@@ -33,6 +33,29 @@ const vocabularyData = {
     { chinese: "哥哥，姐姐，年长的人", thai: "พี่" },
     { chinese: "弟弟，妹妹，年幼的人", thai: "น้อง" }
   ],
+  "国家": [
+  { chinese: "中国", thai: "จีน" },
+  { chinese: "泰国", thai: "ไทย" },
+  { chinese: "美国", thai: "อเมริกา" },
+  { chinese: "日本", thai: "ญี่ปุ่น" },
+  { chinese: "英国", thai: "อังกฤษ" },
+  { chinese: "法国", thai: "ฝรั่งเศส" },
+  { chinese: "德国", thai: "เยอรมนี" },
+  { chinese: "韩国", thai: "เกาหลี" },
+  { chinese: "印度", thai: "อินเดีย" },
+  { chinese: "俄罗斯", thai: "รัสเซีย" },
+  { chinese: "澳大利亚", thai: "ออสเตรเลีย" },
+  { chinese: "加拿大", thai: "แคนาดา" },
+  { chinese: "巴西", thai: "บราซิล" },
+  { chinese: "新加坡", thai: "สิงคโปร์" },
+  { chinese: "马来西亚", thai: "มาเลเซีย" },
+  { chinese: "越南", thai: "เวียดนาม" },
+  { chinese: "印度尼西亚", thai: "อินโดนีเซีย" },
+  { chinese: "菲律宾", thai: "ฟิลิปปินส์" },
+  { chinese: "意大利", thai: "อิตาลี" },
+  { chinese: "西班牙", thai: "สเปน" }
+],
+
   "颜色": [
     { chinese: "红色", thai: "สีแดง" },
     { chinese: "蓝色", thai: "สีน้ำเงิน" },
@@ -961,6 +984,7 @@ window.addEventListener('DOMContentLoaded', () => {
   updateCustomWordsList();
   refreshManagementView();
 });
+
 
 
 
